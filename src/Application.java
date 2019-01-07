@@ -1,3 +1,8 @@
+import algorithm.other.MergeTwoSortedArrays;
+import algorithm.sort.BubbleSort;
+import algorithm.sort.InsertSort;
+import algorithm.sort.MergeSort;
+import algorithm.sort.QuickSort;
 import solution.Problem_001;
 import solution.Problem_002;
 import solution.Problem_003;
@@ -13,11 +18,39 @@ import solution.Problem_027;
 import solution.Problem_028;
 import solution.Problem_035;
 import solution.Problem_038;
+import solution.Problem_053;
 
 public class Application {
 
 	public static void main(String[] args) throws Exception {
 		System.out.println("Hello World!");
+		System.out.println();
+		
+		System.out.println("----------     Algorithm    ----------");
+		System.out.println("********** QucikSort  Begin **********");
+		QuickSort quickSort = new QuickSort();
+		quickSort.TestCase();
+		System.out.println("********** QucikSort   End  **********");
+		System.out.println();
+		
+		System.out.println("********** MergeSort  Begin **********");
+		MergeSort mergeSort = new MergeSort();
+		mergeSort.TestCase();
+		System.out.println("********** MergeSort   End  **********");
+		System.out.println();
+		
+		System.out.println("********** InsertSort  Begin **********");
+		InsertSort insertSort = new InsertSort();
+		insertSort.TestCase();
+		System.out.println("********** InsertSort   End  **********");
+		System.out.println();
+		
+		System.out.println("********** BubbleSort  Begin **********");
+		BubbleSort bubbleSort = new BubbleSort();
+		bubbleSort.TestCase();
+		System.out.println("********** BubbleSort   End  **********");
+		System.out.println();
+		
 		System.out.println();
 
 		System.out.println("********** Problem  1  Begin **********");
@@ -108,6 +141,19 @@ public class Application {
 		Problem_038 problem_38 = new Problem_038();
 		problem_38.TestCase();
 		System.out.println("********** Problem  38  End  **********");
+		System.out.println();
+		
+		System.out.println("********** Problem  53 Begin **********");
+		Problem_053 problem_53 = new Problem_053();
+		problem_53.TestCase();
+		System.out.println("********** Problem  53  End  **********");
+		System.out.println();
+		
+		System.out.println("------------     Other    ------------");
+		System.out.println("********** MergeTwoSortedArrays  Begin **********");
+		MergeTwoSortedArrays mergeTwoSortedArrays = new MergeTwoSortedArrays();
+		mergeTwoSortedArrays.TestCase();
+		System.out.println("********** MergeTwoSortedArrays   End  **********");
 		System.out.println();
 	}
 }
