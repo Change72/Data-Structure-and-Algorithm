@@ -19,6 +19,10 @@ import solution.Problem_028;
 import solution.Problem_035;
 import solution.Problem_038;
 import solution.Problem_053;
+import solution.Problem_058;
+import solution.Problem_066;
+import solution.Problem_067;
+import solution.Problem_070;
 
 public class Application {
 
@@ -137,6 +141,7 @@ public class Application {
 		System.out.println("********** Problem  35  End  **********");
 		System.out.println();
 		
+		System.out.println("****** Problem  38 Beats 100% !~ ******");
 		System.out.println("********** Problem  38 Begin **********");
 		Problem_038 problem_38 = new Problem_038();
 		problem_38.TestCase();
@@ -147,6 +152,31 @@ public class Application {
 		Problem_053 problem_53 = new Problem_053();
 		problem_53.TestCase();
 		System.out.println("********** Problem  53  End  **********");
+		System.out.println();
+		
+		System.out.println("********** Problem  58 Begin **********");
+		Problem_058 problem_58 = new Problem_058();
+		problem_58.TestCase();
+		System.out.println("********** Problem  58  End  **********");
+		System.out.println();
+		
+		System.out.println("****** Problem  66 Beats 100% !~ ******");
+		System.out.println("********** Problem  66 Begin **********");
+		Problem_066 problem_66 = new Problem_066();
+		problem_66.TestCase();
+		System.out.println("********** Problem  66  End  **********");
+		System.out.println();
+		
+		System.out.println("********** Problem  67 Begin **********");
+		Problem_067 problem_67 = new Problem_067();
+		problem_67.TestCase();
+		System.out.println("********** Problem  67  End  **********");
+		System.out.println();
+		
+		System.out.println("********** Problem  70 Begin **********");
+		Problem_070 problem_70 = new Problem_070();
+		problem_70.TestCase();
+		System.out.println("********** Problem  70  End  **********");
 		System.out.println();
 		
 		System.out.println("------------     Other    ------------");
