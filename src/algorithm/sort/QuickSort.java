@@ -2,6 +2,20 @@ package algorithm.sort;
 
 import java.util.Arrays;
 
+/**
+ * @author change
+ * 堆排序与快速排序：
+ * 
+ * 		稳定性：
+ * 			都不稳定
+ * 
+ * 		时间复杂度：
+ * 			平均：O(nlogn)
+ * 			最坏：堆排序 O(nlogn) 快排 O(n^2)
+ *
+ *		空间复杂度：
+ *			堆排序 O(1) 快排 O(n)
+ */
 public class QuickSort {
 	
 	public int[] quickSort(int[] nums, int start, int end) {

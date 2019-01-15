@@ -1,8 +1,13 @@
 import algorithm.other.MergeTwoSortedArrays;
 import algorithm.sort.BubbleSort;
+import algorithm.sort.HeapSort;
 import algorithm.sort.InsertSort;
 import algorithm.sort.MergeSort;
 import algorithm.sort.QuickSort;
+import dataStructure.heap.MaxHeap;
+import dataStructure.heap.MaxHeapModel;
+import dataStructure.heap.MinHeap;
+import dataStructure.heap.MinHeapModel;
 import solution.Problem_001;
 import solution.Problem_002;
 import solution.Problem_003;
@@ -31,10 +36,10 @@ public class Application {
 		System.out.println();
 		
 		System.out.println("----------     Algorithm    ----------");
-		System.out.println("********** QucikSort  Begin **********");
+		System.out.println("********** QuickSort  Begin **********");
 		QuickSort quickSort = new QuickSort();
 		quickSort.TestCase();
-		System.out.println("********** QucikSort   End  **********");
+		System.out.println("********** QuickSort   End  **********");
 		System.out.println();
 		
 		System.out.println("********** MergeSort  Begin **********");
@@ -53,6 +58,39 @@ public class Application {
 		BubbleSort bubbleSort = new BubbleSort();
 		bubbleSort.TestCase();
 		System.out.println("********** BubbleSort   End  **********");
+		System.out.println();
+		
+		System.out.println("********** HeapSort  Begin **********");
+		HeapSort heapSort = new HeapSort();
+		heapSort.TestCase();
+		System.out.println("********** HeapSort   End  **********");
+		System.out.println();
+		
+		System.out.println();
+		
+		System.out.println("-------     Data Structure    -------");
+		System.out.println("********** MaxHeap  Begin **********");
+		MaxHeap maxHeap = new MaxHeap();
+		maxHeap.TestCase();
+		System.out.println("********** MaxHeap   End  **********");
+		System.out.println();
+		
+		System.out.println("********** MaxHeapModel  Begin **********");
+		MaxHeapModel maxHeapModel = new MaxHeapModel();
+		maxHeapModel.TestCase();
+		System.out.println("********** MaxHeapModel   End  **********");
+		System.out.println();
+		
+		System.out.println("********** MinHeap  Begin **********");
+		MinHeap minHeap = new MinHeap();
+		minHeap.TestCase();
+		System.out.println("********** MinHeap   End  **********");
+		System.out.println();
+		
+		System.out.println("********** MinHeapModel  Begin **********");
+		MinHeapModel minHeapModel = new MinHeapModel();
+		minHeapModel.TestCase();
+		System.out.println("********** MinHeapModel   End  **********");
 		System.out.println();
 		
 		System.out.println();
