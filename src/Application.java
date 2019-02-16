@@ -28,6 +28,9 @@ import solution.Problem_058;
 import solution.Problem_066;
 import solution.Problem_067;
 import solution.Problem_070;
+import solution.Problem_080;
+import solution.Problem_082;
+import solution.Problem_083;
 
 public class Application {
 
@@ -216,6 +219,29 @@ public class Application {
 		problem_70.TestCase();
 		System.out.println("********** Problem  70  End  **********");
 		System.out.println();
+		
+		System.out.println("********** Problem  80 Begin **********");
+		Problem_080 problem_80 = new Problem_080();
+		problem_80.TestCase();
+		System.out.println("********** Problem  80  End  **********");
+		System.out.println();
+		
+		System.out.println("********** Problem  82 Begin **********");
+		Problem_082 problem_82 = new Problem_082();
+		problem_82.TestCase();
+		System.out.println("********** Problem  82  End  **********");
+		System.out.println();
+		
+		System.out.println("********** Problem  83 Begin **********");
+		Problem_083 problem_83 = new Problem_083();
+		problem_83.TestCase();
+		System.out.println("********** Problem  83  End  **********");
+		System.out.println();
+		
+		System.out.println("****** Problem  100 Beats 100% !~ ******");
+		System.out.println("****** Problem  104 Beats 100% !~ ******");
+		System.out.println("****** Problem  107 Beats 100% !~ ******");
+		System.out.println("****** Problem  112 Beats 100% !~ ******");
 		
 		System.out.println("------------     Other    ------------");
 		System.out.println("********** MergeTwoSortedArrays  Begin **********");
