@@ -8,6 +8,7 @@ import dataStructure.heap.MaxHeap;
 import dataStructure.heap.MaxHeapModel;
 import dataStructure.heap.MinHeap;
 import dataStructure.heap.MinHeapModel;
+import dataStructure.tree.BinarySearchTree;
 import solution.Problem_001;
 import solution.Problem_002;
 import solution.Problem_003;
@@ -94,6 +95,12 @@ public class Application {
 		MinHeapModel minHeapModel = new MinHeapModel();
 		minHeapModel.TestCase();
 		System.out.println("********** MinHeapModel   End  **********");
+		System.out.println();
+		
+		System.out.println("********** Binary Search Tree Begin **********");
+		BinarySearchTree binarySearchTree = new BinarySearchTree();
+		binarySearchTree.TestCase();
+		System.out.println("********** Binary Search Tree   End  **********");
 		System.out.println();
 		
 		System.out.println();
