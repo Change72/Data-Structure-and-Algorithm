@@ -9,6 +9,23 @@ import java.util.Arrays;
  * 最大优先队列，无论入队顺序，当前最大的元素优先出队
  * 与 MaxHeap 不同的是，这个类使用 private 记录 堆 和 堆大小
  */
+/*
+ * Heap sort using linked lists
+ * The answer is "you don't want to implement heap sort on a linked list."
+ * 
+ * Heapsort is a good sorting algorithm because it's O(n log n) and it's in-place. 
+ * However, when you have a linked list heapsort is no longer O(n log n) because it relies on random access to the array, 
+ * which you do not have in a linked list. So you either lose your in-place attribute (but needing to define a tree-like structure is 
+ * O(n) space). Or you will need to do without them, but remember that a linked list is O(n) for member lookup. Which brings the runtime 
+ * complexity to something like O(n^2 log n) which is worse than bubblesort.
+ * 
+ * Just use mergesort instead. You already have the O(n) memory overhead requirement.
+ * 
+ * 用链表建堆的想法
+ * 		
+ * 不要用链表建堆，因为堆本身的结构特性 高度依赖于 数组的随机访问（eg.交换操作），而如果直接使用链表，其查找时间为 O(n) -> 从索引i到2i的过程，且指针的修改更为复杂
+ * 如果从 数组->链表，则需要额外的空间 O(n)(which means define a tree-like structure needs O(n) space)
+ */
 public class MaxHeapModel {
 	/**
 	 * 堆 参数
