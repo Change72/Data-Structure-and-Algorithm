@@ -21,15 +21,25 @@ import java.util.Scanner;
  * 
  * 2：随机生成 Salary {name, baseSalary, bonus  }的记录，如“wxxx,10,1”，每行一条记录，总共1000万记录，写入文本文件（UFT-8编码），
  * 然后读取文件，name的前两个字符相同的，其年薪累加，比如wx，100万，3个人，最后做排序和分组，输出年薪总额最高的10组：
-         wx, 200万，10人
-         lt, 180万，8人
-         ....
+ * 		wx, 200万，10人
+ * 		lt, 180万，8人
+ * 		....
  * name 4位a-z随机，    baseSalary [0,100]随机 bonus[0-5]随机 年薪总额 = baseSalary*13 + bonus
  * 请努力将程序优化到5秒内执行完
  * 
- * 目前进展：
- * 随机生成 + 写入 9s + 0.65s
- * 读取 + 统计排序 9s + 0.015s
+ * process by now:
+ *     	随机生成 + 写入 9s + 0.65s
+ *     	读取 + 统计排序 9s + 0.015s
+ *     
+ * useful skills:
+ * 	    1. random generate
+ * 		2. use buffer to write
+ * 		3. use scanner to read
+ * 		4. modify values in ArrayList
+ * 		5. use map.entrySet() for iteration
+ * 		6. Algorithm: use List to get most 10 node, with time complexity almost O(n), space complexity almost O(1)
+ * 			think the worst situation: time complexity O(n), space complexity O(n)
+ * 		7. Map<String, List<Integer>> one to more
  */
 
 public class EmployeeSalary {
@@ -85,6 +95,7 @@ public class EmployeeSalary {
 		for (String record : records) {
 			writer.write(record);
 		}
+		// 清空缓存区
 		writer.flush();
 		writer.close();
 		long end = System.currentTimeMillis();
@@ -100,9 +111,9 @@ public class EmployeeSalary {
 		long begintime = System.currentTimeMillis();
 		List<String> record = new ArrayList<String>();
 		Random random = new Random();
-		// �������
 		for (int i = 0; i < 10000000; i++) {
 			StringBuffer sb = new StringBuffer();
+			// use random to generate
 			for (int j = 0; j < 4; j++)
 				sb.append(String.valueOf((char) (Math.round(Math.random() * 25 + 97))));
 			record.add(sb.toString() + "," + String.valueOf(random.nextInt(101)) + ","
@@ -122,6 +133,7 @@ public class EmployeeSalary {
 	public Map<String, List<Integer>> statistics() throws FileNotFoundException {
 		long begintime = System.currentTimeMillis();
 		Map<String, List<Integer>> map = new HashMap<String, List<Integer>>();
+		// initize scanner to read file
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(new File("temp.txt"), "UTF-8");
 		while (sc.hasNextLine()) {
@@ -133,6 +145,7 @@ public class EmployeeSalary {
 				map.get(key).add(Integer.valueOf(infos[1]) * 13 + Integer.valueOf(infos[2]));
 				map.get(key).add(1);
 			} else {
+				// modify values in ArrayList
 				map.get(key).set(0, (map.get(key).get(0) + Integer.valueOf(infos[1]) * 13 + Integer.valueOf(infos[2])));
 				map.get(key).set(1, map.get(key).get(1) + 1);
 			}

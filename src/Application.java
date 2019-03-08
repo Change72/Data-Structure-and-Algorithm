@@ -1,5 +1,6 @@
 import algorithm.other.MergeTwoSortedArrays;
 import algorithm.sort.BubbleSort;
+import algorithm.sort.CountingSort;
 import algorithm.sort.HeapSort;
 import algorithm.sort.InsertSort;
 import algorithm.sort.MergeSort;
@@ -68,6 +69,12 @@ public class Application {
 		HeapSort heapSort = new HeapSort();
 		heapSort.TestCase();
 		System.out.println("********** HeapSort   End  **********");
+		System.out.println();
+		
+		System.out.println("********** CountingSort  Begin **********");
+		CountingSort countingSort = new CountingSort();
+		countingSort.TestCase();
+		System.out.println("********** CountingSort   End  **********");
 		System.out.println();
 		
 		System.out.println();
