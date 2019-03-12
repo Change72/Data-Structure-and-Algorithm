@@ -1,3 +1,4 @@
+import algorithm.dynamic.SteelCutting;
 import algorithm.other.MergeTwoSortedArrays;
 import algorithm.sort.BubbleSort;
 import algorithm.sort.CountingSort;
@@ -74,6 +75,12 @@ public class Application {
 		System.out.println("********** CountingSort  Begin **********");
 		CountingSort countingSort = new CountingSort();
 		countingSort.TestCase();
+		System.out.println("********** CountingSort   End  **********");
+		System.out.println();
+		
+		System.out.println("********** CountingSort  Begin **********");
+		SteelCutting steelCutting = new SteelCutting();
+		steelCutting.TestCase();
 		System.out.println("********** CountingSort   End  **********");
 		System.out.println();
 		
