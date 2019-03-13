@@ -1,3 +1,4 @@
+import algorithm.dynamic.GoldMine;
 import algorithm.dynamic.SteelCutting;
 import algorithm.other.MergeTwoSortedArrays;
 import algorithm.sort.BubbleSort;
@@ -78,10 +79,16 @@ public class Application {
 		System.out.println("********** CountingSort   End  **********");
 		System.out.println();
 		
-		System.out.println("********** CountingSort  Begin **********");
+		System.out.println("********** SteelCutting  Begin **********");
 		SteelCutting steelCutting = new SteelCutting();
 		steelCutting.TestCase();
-		System.out.println("********** CountingSort   End  **********");
+		System.out.println("********** SteelCutting   End  **********");
+		System.out.println();
+		
+		System.out.println("********** GoldMine  Begin **********");
+		GoldMine goldMine = new GoldMine();
+		goldMine.TestCase();
+		System.out.println("********** GoldMine   End  **********");
 		System.out.println();
 		
 		System.out.println();
@@ -263,6 +270,7 @@ public class Application {
 		System.out.println("****** Problem  104 Beats 100% !~ ******");
 		System.out.println("****** Problem  107 Beats 100% !~ ******");
 		System.out.println("****** Problem  112 Beats 100% !~ ******");
+		System.out.println("****** Problem  228 Beats 100% !~ ******");
 		
 		System.out.println("------------     Other    ------------");
 		System.out.println("********** MergeTwoSortedArrays  Begin **********");
